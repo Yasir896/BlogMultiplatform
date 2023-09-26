@@ -152,8 +152,10 @@ fun LoginScreen() {
                     .cursor(Cursor.Pointer)
                     .onClick {
                         scope.launch {
-                            val userName = (document.getElementById(userNameInput) as HTMLInputElement).value
-                            val password = (document.getElementById(passwordInput) as HTMLInputElement).value
+                            val userName =
+                                (document.getElementById(userNameInput) as HTMLInputElement).value
+                            val password =
+                                (document.getElementById(passwordInput) as HTMLInputElement).value
 
                             if (userName.isNotEmpty() && password.isNotEmpty()) {
                                 val user = checkUserExistance(
@@ -182,12 +184,14 @@ fun LoginScreen() {
             ) {
                 SpanText(text = "Sign In")
             }
-            SpanText(modifier = Modifier
-                .width(350.px)
-                .color(Colors.Red)
-                .fontFamily(FONT_FAMILY)
-                .textAlign(TextAlign.Center),
-                text = errorText)
+            SpanText(
+                modifier = Modifier
+                    .width(350.px)
+                    .color(Colors.Red)
+                    .fontFamily(FONT_FAMILY)
+                    .textAlign(TextAlign.Center),
+                text = errorText
+            )
         }
     }
 }
