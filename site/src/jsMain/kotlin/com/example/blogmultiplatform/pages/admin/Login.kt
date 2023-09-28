@@ -13,7 +13,6 @@ import com.example.blogmultiplatform.styles.LoginInputStyle
 import com.example.blogmultiplatform.util.Constants.FONT_FAMILY
 import com.example.blogmultiplatform.util.Ids.passwordInput
 import com.example.blogmultiplatform.util.Ids.userNameInput
-import com.example.blogmultiplatform.util.Res
 import com.example.blogmultiplatform.util.checkUserExistance
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -44,7 +43,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
-import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import kotlinx.browser.document

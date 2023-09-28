@@ -19,7 +19,7 @@ suspend fun userCheck(context: ApiContext) {
     try {
 
         val userRequest =
-            context.req.body?.let { Json.decodeFromString<User>(it.toString()) }
+            context.req.body?.decodeToString()?.let { Json.decodeFromString<User>(it) }
         val user = userRequest?.let {
             context.data.getValue<MongoDB>().checkUserExistence(
                 User(userName = it.userName, password = hashPassword(it.password))
@@ -39,7 +39,6 @@ suspend fun userCheck(context: ApiContext) {
         context.res.setBodyText(Json.encodeToString(Exception(e.message)))
     }
 }
-
 
 private fun hashPassword(password: String): String {
     val messageDigest = MessageDigest.getInstance("SHA-256")
